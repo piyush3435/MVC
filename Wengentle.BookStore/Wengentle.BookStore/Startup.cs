@@ -8,6 +8,7 @@
             services.AddMvc();//MVC
             services.AddControllers();//WebAPI
             services.AddControllersWithViews();//MVC
+            services.AddRazorPages();
             */
             services.AddControllersWithViews();
         }
@@ -67,6 +68,7 @@
                 });
                 */
                 endpoints.MapDefaultControllerRoute();
+
             });
             /*
             app.UseEndpoints(endpoints =>
