@@ -1,4 +1,6 @@
-﻿namespace Webgentle.BookStore
+﻿using Microsoft.Extensions.FileProviders;
+
+namespace Webgentle.BookStore
 {
     public class Startup
     {
@@ -38,6 +40,12 @@
                 await next();
             });
             */
+            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "MyStaticFiles")),
+                RequestPath = "/MyStaticFiles"
+            });
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

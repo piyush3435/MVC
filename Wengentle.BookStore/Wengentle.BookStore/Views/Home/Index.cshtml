@@ -7,70 +7,30 @@
     <head>
         <meta name="viewport" content="width=device=width" />
         <title>Index</title>
+        <link href="~/css/Site.css" rel="stylesheet"/>
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"/>
     </head>
-    <body>
-        @*<h1>Welcome To Book Store Application</h1>
-
-        <h1>Razor Single Line Syntax</h1>
-        <h1>@DateTime.Now.ToString("dd-MM-yyyy")</h1>
-        <h1>Sum = @(3+5)</h1>
-        <h1>Razor Multi Line Syntax</h1>
-    @{
-        int a = 10;
-        int b = 20;
-        int c = a + b;
-    }
-        <h1> @c = @a + @b</h1>
-        <h1>How to write @@?</h1>
-        <h2>My email: piyushsingh31415@gmailcom</h2>
-        <h2>twitter - @@webgentle</h2>
-
-        <p>This is the Home Page of Book Application.</p>*@
-        @*@{
-            bool show = true;
-        }
-        @if(show){
-            show = false;
-            <h1> if Block</h1>
-            if (show)
-            {
-                <h1>if - if Block</h1>
-            }
-            else
-            {
-                <h1>if - else Block</h1>   
-            }
-        }
-        else
+    <body class="container">
+        <h1 class="h1">Welcome To Book Store Application</h1>
+        <img class="logo" src = "~/images/logo-social.png" alt="logo"/>
+        <img src ="~/MyStaticFiles/Image/Dummy-Logo.png" alt="Dummy Logo"/>
+        
+        @*@for (int i = 0; i < 10; i++)
         {
-           <h1>Else Block</h1>
+            <h3>loop Body iter -> @i</h3>
         }*@
-       @* @{
-            int a = 10;
-            int b = -1;
-        }
-        <h1>Ternary - @(a==10 ? b=1 : b=0)</h1>
-        <h1>Value Of b: @b </h1>*@
-
         @*@{
-            int x = 2;
+            var List = new List<int>() {1,2,3,4,5,6,7,8,9,10};
         }
-        @switch(x){
-            case 1:
-                <h1>I am 1</h1>
-                break;
-            case 2:
-                <h1>I am 2</h1>
-                break;
-            case 3:
-                <h1>I am 3</h1>
-                break;
-            case 4:
-                <h1>I am 4</h1>
-                break;
-            default:
-                <h1>I am Default</h1>
-                break;
+        @foreach (var item in List)
+        {
+            <h3> ForEach loop Body Items -> @item</h3>
         }*@
     </body>
+    <script src="~/lib/jquery/jquery.js"></script>
 </html>
+<script>
+    $(document).ready(function() {
+        alert("Page Loaded");
+    });
+</script>

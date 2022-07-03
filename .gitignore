@@ -7,3 +7,4 @@
 /Wengentle.BookStore/Wengentle.BookStore/bin/Debug/net6.0
 /Wengentle.BookStore/Wengentle.BookStore/obj
 *.user
+/Wengentle.BookStore/Wengentle.BookStore/wwwroot/lib
